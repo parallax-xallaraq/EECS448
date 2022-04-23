@@ -1,42 +1,27 @@
 <?php
+echo "<p> Multiplication Table</p>";
 
-function mult($x, $y){
-  $z = $x * $y;
-  return $z;
-}
-
-function tableLine($row){
-
+echo "<table>";
   echo "<tr>";
-  echo "<td> " . $row . "</td>";
-
-  // calculate for each table cell
-  for($i=1; $i <= 100; $i = $1 + 1){
-  {
-    echo "<td> " . mult($row, $i) . "</td>";
-  }
-
-  echo "</tr>"
-}
-
-function table(){
-  echo "<table>";
-
-  // table columns
-  echo "<tr> <td> </td>";
-  for($i=1; $i <= 100; $i = $1 + 1){
-    echo "<td>". $i ." </td>";
-  }
+    echo "<th> </th>";
+    for($i = 1; $i <= 100; $i++)
+    {
+      echo "<th>" . $i . "</th>";
+    }
   echo "</tr>";
 
-  // populate rows
-  for($i=1; $i <= 100; $i = $1 + 1){
-    tableLine($i);
+  for($j = 1; $j <= 100; $j++)
+  {
+    echo "<tr>";
+    echo "<td> <b>" . $j . "</b> </td>";
+    for($k = 1; $k <= 100; $k++)
+    {
+    echo "<td>" . ($j * $k) . "</td>";
+    }
+    echo "</tr>";
   }
-  echo "</table>";
-}
 
-// run
-table();
+
+echo "</table>";
 
 ?>
