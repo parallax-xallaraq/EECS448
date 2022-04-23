@@ -1,0 +1,24 @@
+body
+{
+	background-color: gray;
+	background-image: URL("spiderweb.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+p:hover
+{
+	color: yellow;
+}
+
+h1
+{
+	font-size: 50pt;
+	color: red;
+}
+
+h2
+{
+	color: red;
+}

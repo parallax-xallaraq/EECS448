@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title> Exercise 3: Web Store  </title>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="formChecker.js"> </script>
+	</head>
+	<body>
+    <h1> Welcome to the Web Store!</h1>
+
+    <h2> Items for Sale </h2>
+    <p>
+      <img src="realSpider.jpg" style="width:200px;height:200px;">
+      Real Spider: $10 &nbsp
+
+      <img src="scaryKid.jpg" style="width:200px;height:200px;">
+      Spider Costume: $40 &nbsp
+
+      <img src="spiderman.jpeg" style="width:200px;height:200px;">
+      Spider-Man Plush: $15 &nbsp
+    </p>
+
+		<form action="customerBackend.php" method="post" onsubmit="Submit()">
+    <h2> Cart </h2>
+    <p>
+      <label for="realspider">Real Spider:</label>
+      <select name="realspider" id="realspider">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+
+			</select>
+			<br>
+			<label for="costume">Spider Costume:</label>
+      <select name="costume" id="costume">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			<br>
+			<label for="plush">Spider-Man Plush:</label>
+      <select name="plush" id="plush">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+    </p>
+
+    <h2> Checkout </h2>
+    <p><?php include 'myfirstprogram.php';?>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+			<label for="email_ext">@</label>
+      <input type="text" id="email_ext" name="email_ext">
+			.com <br>
+
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="pwd">
+    </p>
+		<p>
+			Choose shipping:<br>
+			<input type="radio" name="shipping" id="0" value="7 day" checked>
+	    <label for="0"> Free 7 day </label> <br>
+			<input type="radio" name="shipping" id="5" value="3 day">
+	    <label for="5"> $5.00 three day </label> <br>
+			<input type="radio" name="shipping" id="50" value="Express">
+	    <label for="50"> $50.00 over night </label> <br>
+		</p>
+
+		<p>
+			<input type="submit">
+			</form>
+			<button onclick="Reset()"> Reset </button>
+		</p>
+  </body>
+</html>
