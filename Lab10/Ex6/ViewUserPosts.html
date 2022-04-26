@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title> Exercise 6: View User Posts </title>
+	</head>
+	<body>
+    <h2>
+      View all posts by a user:
+    </h2>
+    <form action="ViewUserPosts.php" method="post">
+      <?php
+        $mysqli = new mysqli("mysql.eecs.ku.edu", "t905k768", "aixoo9La", "t905k768");
+        if ($mysqli->connect_error) {
+          printf("Connect failed: %s\n", $mysqli->connect_error);
+          exit();
+        }
+
+        $query = "SELECT * FROM Users;";
+        $result_users = $mysqli->query($query);
+
+        if ($result_users->num_rows > 0) {
+
+          echo "<p><label for='user'>Choose a user: </label>";
+          echo "<select name='user' id='user'>";
+          while($row = $result_users->fetch_assoc()) {
+            echo "<option value='" . $row["user_id"] . "'>" . $row["user_id"]  . "</option>";
+          }
+          echo "</select></p>";
+
+        }
+      ?>
+      <input type="submit">
+    </form>
+  </body>
+</html>
